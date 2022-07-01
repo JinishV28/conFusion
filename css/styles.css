@@ -9,7 +9,7 @@
     min-height: 400px;
 }
 .footer{
-    background-color: #D1C4E9;
+    background-color: #fed7ef;
     margin: 0px auto;
     padding: 20px 0px 20px 0px; 
 }
@@ -31,4 +31,7 @@ body{
 }
 .navbar-dark{
     opacity: 90%;
+}
+.card-header{
+    background-color: #512DA8;
 }
