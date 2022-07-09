@@ -1,0 +1,68 @@
+$lt-gray: #ddd;
+$bg-dark: blue;
+$bg-light: #4cd2ff;
+$bg-pale: #fed7ef;
+$carousel-item-height: 300px;
+
+@mixin zero-margin($pad-up-dn: 0px, $pad-left-right: 0px) {
+    margin: 0px auto;
+    padding: $pad-up-dn $pad-left-right;
+}
+.row-header{
+    @include zero-margin(0px, 0px);
+}
+.row-content{
+    @include zero-margin(40px, 0px);
+    border-bottom: 1px ridge;
+    min-height: 400px; 
+}
+.footer{
+    @include zero-margin(20px, 0px);
+    background-color: $bg-pale;
+}
+.jumbotron{
+    @include zero-margin(70px, 30px);
+    background-color: $bg-light;
+    color: floralwhite;
+}
+body{
+    padding: 55px 0px 0px 0px;
+    z-index: 0px;
+}
+.navbar-dark{
+    background-color: $bg-dark;
+    opacity: 90%;
+}
+.tab-content{
+    border-bottom: 1px solid $lt-gray;
+    border-left: 1px solid $lt-gray;
+    border-right: 1px solid $lt-gray;
+}
+.collapsed{
+    color: inherit;
+}
+.carousel{
+    background-color:  #de5cff;
+    .carousel-item{
+        height: $carousel-item-height;
+        img{
+            position: absolute;
+            top:0;
+            left:0;
+            min-height: $carousel-item-height;
+        }
+    }
+}
+.carousel-caption{
+    padding-bottom: 5%;
+    padding-left: 20%;
+}
+.btn-group {
+    margin-left: 2%;
+}
+#carouselButton{
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
