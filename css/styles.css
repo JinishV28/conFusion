@@ -17,7 +17,7 @@
   margin: 0px auto;
   padding: 70px 30px;
   background-color: #4cd2ff;
-  color: floralwhite; }
+  color: floralWhite; }
 
 body {
   padding: 55px 0px 0px 0px;
@@ -57,3 +57,13 @@ body {
   position: absolute;
   bottom: 0px;
   z-index: 1; }
+
+.modal .modal-header {
+  opacity: 90%;
+  background-color: blue;
+  color: floralWhite; }
+  .modal .modal-header .close {
+    color: floralwhite; }
+
+.modal .modal-body {
+  background-color: #99e6ff; }

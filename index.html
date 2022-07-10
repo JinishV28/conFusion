@@ -21,7 +21,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve A Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="crossButton1">
                         &times;
                     </button>
                 </div>
@@ -58,7 +58,7 @@
                         </div>
                         <div class="form-group row">
                             <label for="radiobtn" class="col-12 col-md-2 col-form-label">Section</label>
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <div class="btn-group btn-group-toggle" id="sectionButtons" data-toggle="buttons">
                                 <label class="btn btn-success active">
                                     <input type="radio" name="options" id="option1" autocomplete="off" checked>Non Smoking
                                 </label>
@@ -77,7 +77,7 @@
                             </div>
                         </div>
                         <div class="offset-md-2" style="margin-top: 2%; margin-bottom: 2%;">&nbsp;
-                            <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-sm btn-secondary" id="cancelButton1">Cancel</button>
                             <button type="submit" class="btn btn-sm btn-primary">Reserve</button>
                         </div>
                     </form>
@@ -99,8 +99,8 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact Us</a></li>
                 </ul>
             </div>
-            <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+            <span class="navbar-text" style="cursor: pointer;">
+                <a id="loginButton">
                 <span class="fa fa-sign-in"></span>Login</a>
             </span> 
         </div>
@@ -110,7 +110,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="crossButton2">
                         &times;
                     </button>
                 </div>
@@ -134,7 +134,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" id="cancelButton2">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -153,7 +153,7 @@
                     <img src="./img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <button class="btn btn-sm btn-block btn-warning" data-toggle="modal" data-target="#reserveModal" onclick="location.href='#reserveForm'" style="background-color:#F6BE00; color:floralwhite; font-size: large;"><strong>Reserve Table</strong></button>
+                    <button class="btn btn-sm btn-block btn-warning" id="reserveButton" onclick="location.href='#reserveForm'" style="background-color:#F6BE00; color:floralwhite; font-size: large;"><strong>Reserve Table</strong></button>
                 </div>
             </div>
         </div>
@@ -317,6 +317,22 @@
                     $("#carouselButton").children('span').removeClass('fa-play');
                     $("#carouselButton").children('span').addClass('fa-pause');
                }
+            });
+
+            $("#reserveButton").click(function(){
+                $("#reserveModal").modal('toggle');
+            });
+
+            $("#cancelButton1, #crossButton1").click(function(){
+                $("#reserveModal").modal('hide');
+            });
+
+            $("#loginButton").click(function(){
+                $("#loginModal").modal('toggle');
+            });
+
+            $("#cancelButton2, #crossButton2").click(function(){
+                $("#loginModal").modal('hide');
             });
         });
     </script>

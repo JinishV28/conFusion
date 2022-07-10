@@ -1,7 +1,9 @@
 $lt-gray: #ddd;
 $bg-dark: blue;
 $bg-light: #4cd2ff;
+$bg-modal:#99e6ff;
 $bg-pale: #fed7ef;
+$txt-clr: floralWhite;
 $carousel-item-height: 300px;
 
 @mixin zero-margin($pad-up-dn: 0px, $pad-left-right: 0px) {
@@ -23,7 +25,7 @@ $carousel-item-height: 300px;
 .jumbotron{
     @include zero-margin(70px, 30px);
     background-color: $bg-light;
-    color: floralwhite;
+    color: $txt-clr;
 }
 body{
     padding: 55px 0px 0px 0px;
@@ -65,4 +67,17 @@ body{
     position: absolute;
     bottom: 0px;
     z-index: 1;
+}
+.modal{
+    .modal-header{
+        opacity: 90%;
+        background-color: $bg-dark;
+        color: $txt-clr;
+    .close{
+        color:floralwhite;
+    }
+    }
+    .modal-body{
+        background-color: $bg-modal;
+    }
 }
